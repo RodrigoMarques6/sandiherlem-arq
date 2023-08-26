@@ -8,11 +8,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { PlanoAntecipadoComponent } from './components/main/plano-antecipado/plano-antecipado.component';
 import { PlanoEconomicoComponent } from './components/main/plano-economico/plano-economico.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
+    
     FooterComponent,
     MainComponent,
     PlanoAntecipadoComponent,
@@ -20,7 +21,9 @@ import { PlanoEconomicoComponent } from './components/main/plano-economico/plano
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MenuComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
