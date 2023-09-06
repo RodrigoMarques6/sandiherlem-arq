@@ -1,1 +1,16 @@
-<p>Olá mundo</p>
+<div class="flex justify-center p-4">
+  <mat-expansion-panel 
+    class="w-1/2 p-2"
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header class="border border-indigo-500">
+      <mat-panel-title> Plano Antecipado </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-form-field > 
+      <mat-label>Valor do projeto</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </mat-expansion-panel>
+</div>
