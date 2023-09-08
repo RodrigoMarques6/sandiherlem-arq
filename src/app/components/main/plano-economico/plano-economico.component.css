@@ -1,0 +1,14 @@
+.mat-expansion-panel {
+  margin: auto;
+  background-color: transparent;
+  /* border: 1px solid violet; */
+}
+
+p {
+  justify-content: center;
+  color: bisque;
+}
+
+button:hover {
+  background-color: rgb(28, 1, 48);
+}
