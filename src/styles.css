@@ -2,17 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html, body { 
-  height: 100%;
- }
-
 body { 
   margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
   background: linear-gradient(rgb(30 27 75), #702459);
+  background-repeat: no-repeat;
 }
 
-.mainGeral {
-  height: 81%;
-}
+
