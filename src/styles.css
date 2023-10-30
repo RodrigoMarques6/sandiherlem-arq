@@ -1,12 +1,5 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
-  background: linear-gradient(rgb(30 27 75), #702459);
-  background-repeat: no-repeat;
-}
-
-
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

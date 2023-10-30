@@ -1,39 +1,4 @@
-<div class="mat-elevation-z8 div-table">
-  <table
-    mat-table
-    [dataSource]="tabela"
-    class="mat-table"
-    [style]="{
-      'background-color': 'bisque'
-    }"
-  >
-    <ng-container matColumnDef="posicao">
-      <th mat-header-cell *matHeaderCellDef>Posição</th>
-      <td mat-cell *matCellDef="let row">{{ row.posicao }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="escudo">
-      <th mat-header-cell *matHeaderCellDef>Escudo</th>
-      <td mat-cell *matCellDef="let row">
-        <img
-          class="escudo"
-          src="{{ row.time.escudo }}"
-          alt="Escudo dos times"
-        />
-      </td>
-    </ng-container>
-
-    <ng-container matColumnDef="time">
-      <th mat-header-cell *matHeaderCellDef>Time</th>
-      <td mat-cell *matCellDef="let row">{{ row.time.nome_popular }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="pontos">
-      <th mat-header-cell *matHeaderCellDef>Pontos</th>
-      <td mat-cell *matCellDef="let row">{{ row.pontos }}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let time; columns: displayedColumns"></tr>
-  </table>
+<div class="bg-gradient-to-r from-indigo-950 to-pink-900 p-4 text-white">
+  <app-plano-economico></app-plano-economico>
+  <app-plano-antecipado></app-plano-antecipado>
 </div>

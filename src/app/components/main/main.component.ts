@@ -1,18 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { BrasileiraoService } from 'src/app/services/brasileirao.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css'],
 })
-export class MainComponent implements OnInit {
-  tabela: any = [];
+export class MainComponent {
 
-  displayedColumns = ['posicao', 'escudo', 'time', 'pontos'];
-
-  constructor(private brasileiraoService: BrasileiraoService) {}
-  ngOnInit(): void {
-    this.tabela = this.brasileiraoService.getTabela();
-  }
 }
