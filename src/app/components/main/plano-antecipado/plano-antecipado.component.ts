@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 
@@ -9,13 +9,11 @@ import { MatInputModule } from '@angular/material/input';
   standalone: true,
   imports: [MatExpansionModule, MatInputModule],
 })
-export class PlanoAntecipadoComponent {
+export class PlanoAntecipadoComponent implements OnInit {
+  constructor() {}
+  ngOnInit(): void {}
 
   planDescription: string = 'Neste plano, você recebe no próximo dia útil';
-  
-
-
-
 
   panelOpenState = false;
 }

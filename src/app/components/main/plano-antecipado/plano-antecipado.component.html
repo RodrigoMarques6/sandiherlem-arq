@@ -1,20 +1,18 @@
 <div class="flex justify-center p-4">
-  <mat-expansion-panel 
+  <mat-expansion-panel
     class="w-1/2 p-2 border border-white"
     (opened)="panelOpenState = true"
     (closed)="panelOpenState = false"
   >
-
-
-  <div>
-    <p>{{ planDescription }}</p>
-  </div>
+    <div>
+      <p>{{ planDescription }}</p>
+    </div>
 
     <mat-expansion-panel-header>
-      <mat-panel-title > <p> Plano Antecipado</p> </mat-panel-title>
+      <mat-panel-title> <p>Plano Antecipado</p> </mat-panel-title>
     </mat-expansion-panel-header>
 
-    <mat-form-field > 
+    <mat-form-field>
       <mat-label>Valor do projeto</mat-label>
       <input matInput />
     </mat-form-field>
