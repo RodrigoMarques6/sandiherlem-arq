@@ -16,7 +16,6 @@ import { TabelaAntecipadoComponent } from './components/main/tabela-antecipado/t
   declarations: [
     AppComponent,
     FooterComponent,
-    MainComponent,
     TabelaEconomicoComponent,
     TabelaAntecipadoComponent,
   ],
@@ -27,6 +26,7 @@ import { TabelaAntecipadoComponent } from './components/main/tabela-antecipado/t
     MenuComponent,
     PlanoAntecipadoComponent,
     PlanoEconomicoComponent,
+    MainComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
