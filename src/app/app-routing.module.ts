@@ -6,9 +6,9 @@ import { PlanoEconomicoComponent } from './components/main/plano-economico/plano
 import { TabelaEconomicoComponent } from './components/main/plano-economico/tabela-economico/tabela-economico.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main', pathMatch: 'full' },
-  { path: 'main', component: MainComponent },
-  { path: 'tabela-economico', component: TabelaEconomicoComponent },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+  { path: 'inicio', component: MainComponent },
+  { path: 'tabela-plano-economico', component: TabelaEconomicoComponent },
 ];
 
 @NgModule({

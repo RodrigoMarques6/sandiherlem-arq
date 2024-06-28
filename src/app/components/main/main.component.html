@@ -38,12 +38,15 @@
         <input matInput />
       </mat-form-field>
       <div>
-        <button
-          (click)="teste()"
+        <!-- <button
+          
           mat-raised-button
           class="flex border border-white text-white text-bold p-4 m-auto rounded-md justify-center w-1/2"
         >
           Calcular
+        </button> -->
+        <button id="button" (click)="onButtonClick()" [ngClass]="buttonClass">
+        
         </button>
       </div>
     </mat-expansion-panel>
