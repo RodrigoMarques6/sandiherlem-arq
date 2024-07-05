@@ -46,4 +46,23 @@
       </mat-form-field>
     </mat-expansion-panel>
   </div>
+
+  <div class="flex justify-center p-4">
+    <mat-expansion-panel
+      class="w-1/2 p-2 border border-white"
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> <p>Taxas de Referência</p> </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div>
+        <p>Taxas do plano antecipado:</p>
+        <p>Débito: EM BREVE</p>
+        <p>Crédito 1x: EM BREVE</p>
+        <p>Crédito 2x a 12x: EM BREVE</p>
+      </div>
+    </mat-expansion-panel>
+  </div>
 </div>

@@ -3,4 +3,4 @@
 ## Veja o projeto rodando em: 
 https://sandi.vercel.app/inicio
 
-### Projeto ainda em estágio inicial de esenvolvimento.
+### Projeto ainda em estágio inicial de desenvolvimento.
