@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
-import { PlanoAntecipadoComponent } from './components/main/plano-antecipado/plano-antecipado.component';
-import { PlanoEconomicoComponent } from './components/main/plano-economico/plano-economico.component';
-import { TabelaEconomicoComponent } from './components/main/plano-economico/tabela-economico/tabela-economico.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'inicio', component: MainComponent },
-  { path: 'tabela-plano-economico', component: TabelaEconomicoComponent },
+  // { path: 'tabela-plano-economico', component: TabelaEconomicoComponent },
 ];
 
 @NgModule({
