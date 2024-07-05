@@ -5,6 +5,33 @@
       (opened)="panelOpenState = true"
       (closed)="panelOpenState = false"
     >
+      <mat-expansion-panel-header>
+        <mat-panel-title> <p>Plano Econômico</p> </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div>
+        <p>{{ planDescription }}</p>
+      </div>
+
+      <mat-form-field>
+        <input matInput />
+      </mat-form-field>
+      <div class="flex flex-col items-center">
+        <button
+          id="button"
+          (click)="onButtonClick()"
+          [ngClass]="buttonClass"
+        ></button>
+      </div>
+    </mat-expansion-panel>
+  </div>
+
+  <div class="flex justify-center p-4">
+    <mat-expansion-panel
+      class="w-1/2 p-2 border border-white"
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
       <div>
         <p>{{ planDescription }}</p>
       </div>
@@ -17,38 +44,6 @@
         <mat-label>Valor do projeto</mat-label>
         <input matInput />
       </mat-form-field>
-    </mat-expansion-panel>
-  </div>
-
-  <div class="flex justify-center p-4">
-    <mat-expansion-panel
-      class="w-1/2 p-2 border border-white"
-      (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false"
-    >
-      <mat-expansion-panel-header>
-        <mat-panel-title> <p>Plano Econômico</p> </mat-panel-title>
-      </mat-expansion-panel-header>
-
-      <div>
-        <p>{{ planDescription }}</p>
-      </div>
-
-      <mat-form-field>
-        <input matInput />
-      </mat-form-field>
-      <div>
-        <!-- <button
-          
-          mat-raised-button
-          class="flex border border-white text-white text-bold p-4 m-auto rounded-md justify-center w-1/2"
-        >
-          Calcular
-        </button> -->
-        <button id="button" (click)="onButtonClick()" [ngClass]="buttonClass">
-        
-        </button>
-      </div>
     </mat-expansion-panel>
   </div>
 </div>
