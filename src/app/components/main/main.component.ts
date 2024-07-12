@@ -21,13 +21,16 @@ export class MainComponent implements OnInit {
 
   panelOpenState = false;
 
-  teste() {
-    this.router.navigate(['/tabela-economico']);
+  navigateForEconomicTable() {
+    setTimeout(() => {
+      this.router.navigate(['/tabela-plano-economico']);
+    }, 2500)
+    
   }
 
   onButtonClick() {
     this.buttonClass = 'onclic';
-    setTimeout(() => this.validate(), 250);
+    setTimeout(() => this.validate(), 450);
   }
 
   validate() {
