@@ -11,13 +11,15 @@ import { EconomicTableComponent } from './components/main/economic-table/economi
 import { AdvanceTableComponent } from './components/main/advance-table/advance-table.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, EconomicTableComponent, AdvanceTableComponent],
+  declarations: [AppComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MenuComponent,
     MainComponent,
+    EconomicTableComponent,
+    AdvanceTableComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

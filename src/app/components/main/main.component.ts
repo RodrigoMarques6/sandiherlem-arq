@@ -3,18 +3,21 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { SharedService } from 'src/app/services/shared.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css'],
   standalone: true,
-  imports: [MatExpansionModule, MatInputModule, CommonModule],
+  imports: [MatExpansionModule, MatInputModule, CommonModule, FormsModule],
 })
 export class MainComponent implements OnInit {
   buttonClass = '';
+  valueInputEconomic!: number;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sharedService: SharedService) {}
   ngOnInit(): void {}
 
   planDescription: string = 'Neste plano, você recebe no próximo dia útil';
@@ -23,9 +26,9 @@ export class MainComponent implements OnInit {
 
   navigateForEconomicTable() {
     setTimeout(() => {
-      this.router.navigate(['/tabela-plano-economico']);
-    }, 2500)
-    
+      this.router.navigate(['/tabela-plano-economico']),
+        this.sharedService.setNumber(this.valueInputEconomic);
+    }, 2500);
   }
 
   onButtonClick() {
