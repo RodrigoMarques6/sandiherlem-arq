@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
   constructor(private router: Router, private sharedService: SharedService) {}
   ngOnInit(): void {}
 
-  planDescription: string = 'Neste plano, você recebe no próximo dia útil';
+  planDescription: string = 'Neste plano, você recebe a cada mês de vencimento da parcela do cliente.';
 
   panelOpenState = false;
 

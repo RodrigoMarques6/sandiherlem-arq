@@ -49,7 +49,7 @@ export class EconomicTableComponent implements OnInit {
 
   constructor (private router: Router, private sharedData: SharedService) {}
   goToStart() {
-    this.router.navigate(['home'])
+    this.router.navigate(['/inicio'])
     }
 
 }
