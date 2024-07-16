@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { SharedService } from 'src/app/services/shared.service';
 
 export interface PeriodicElement {
-  taxa: string;
   modalidade: string;
+  taxa: string;
   desconto: number;
   receba_total: number;
   receba_mes: number;
@@ -15,7 +15,7 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Débito',
-    taxa: 'Hydrogen',
+    taxa: '5%',
     desconto: 1.0079,
     receba_total: 1000,
     receba_mes: 1000,
@@ -23,7 +23,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '1x',
-    taxa: 'Helium',
+    taxa: '5%',
     desconto: 4.0026,
     receba_total: 1000,
     receba_mes: 1000,
@@ -31,7 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '2x',
-    taxa: 'Lithium',
+    taxa: '5%',
     desconto: 6.941,
     receba_total: 1000,
     receba_mes: 1000,
@@ -39,7 +39,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '3x',
-    taxa: 'Beryllium',
+    taxa: '5%',
     desconto: 9.0122,
     receba_total: 1000,
     receba_mes: 1000,
@@ -47,7 +47,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '4x',
-    taxa: 'Boron',
+    taxa: '5%',
     desconto: 10.811,
     receba_total: 1000,
     receba_mes: 1000,
@@ -55,7 +55,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '5x',
-    taxa: 'Carbon',
+    taxa: '5%',
     desconto: 12.0107,
     receba_total: 1000,
     receba_mes: 1000,
@@ -63,7 +63,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '6x',
-    taxa: 'Nitrogen',
+    taxa: '5%',
     desconto: 14.0067,
     receba_total: 1000,
     receba_mes: 1000,
@@ -71,7 +71,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '7x',
-    taxa: 'Oxygen',
+    taxa: '5%',
     desconto: 15.9994,
     receba_total: 1000,
     receba_mes: 1000,
@@ -79,11 +79,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: '8x',
-    taxa: 'Fluorine',
+    taxa: '5%',
     desconto: 18.9984,
-    receba_total: 1000,
-    receba_mes: 1000,
-    cliente_paga_mes: 1000,
+    receba_total: 1200,
+    receba_mes: 1300,
+    cliente_paga_mes: 1400,
   },
   {
     modalidade: '9x',
