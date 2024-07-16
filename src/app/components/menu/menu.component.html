@@ -5,14 +5,18 @@
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon class="text-white">menu</mat-icon>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item class="justify-center">
+      <button mat-menu-item class="justify-center" (click)="goToStart()">
         <a href="#" class="text-sm">Início</a>
       </button>
       <button mat-menu-item class="justify-center">
-        <a href="#" class="text-sm leading-6">Plano Econômico</a>
+        <a
+          href="https://www.sumup.com/pt-br/maquininhas/taxas/?cq_src=google_ads&cq_cmp=21460143103&cq_con=&cq_term=&cq_med=&cq_plac=&cq_net=x&cq_pos=&cq_plt=gp&gad_source=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcrcaB0KVUvMpXoCerNLEi4dZHDbbNWnYQqRpERkhKDsWA5g-nJtnudAaAmRhEALw_wcB"
+          class="text-sm leading-6" target="_blank"
+          >Ver taxas Sumup</a
+        >
       </button>
-      <button mat-menu-item class="justify-center">
-        <a href="#" class="text-sm leading-6">Plano Antecipado</a>
+      <button mat-menu-item class="justify-center" (click)="goToStart()">
+        <a href="#" class="text-sm leading-6">Novo orçamento</a>
       </button>
     </mat-menu>
   </button>
