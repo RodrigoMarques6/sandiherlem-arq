@@ -22,7 +22,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '1x',
+    modalidade: 'Crédito (1x)',
     taxa: '5%',
     desconto: 4.0026,
     receba_total: 1000,
@@ -30,7 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '2x',
+    modalidade: 'Crédito (2x)',
     taxa: '5%',
     desconto: 6.941,
     receba_total: 1000,
@@ -38,7 +38,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '3x',
+    modalidade: 'Crédito (3x)',
     taxa: '5%',
     desconto: 9.0122,
     receba_total: 1000,
@@ -46,7 +46,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '4x',
+    modalidade: 'Crédito (4x)',
     taxa: '5%',
     desconto: 10.811,
     receba_total: 1000,
@@ -54,7 +54,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '5x',
+    modalidade: 'Crédito (5x)',
     taxa: '5%',
     desconto: 12.0107,
     receba_total: 1000,
@@ -62,7 +62,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '6x',
+    modalidade: 'Crédito (6x)',
     taxa: '5%',
     desconto: 14.0067,
     receba_total: 1000,
@@ -70,7 +70,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '7x',
+    modalidade: 'Crédito (7x)',
     taxa: '5%',
     desconto: 15.9994,
     receba_total: 1000,
@@ -78,7 +78,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '8x',
+    modalidade: 'Crédito (8x)',
     taxa: '5%',
     desconto: 18.9984,
     receba_total: 1200,
@@ -86,7 +86,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1400,
   },
   {
-    modalidade: '9x',
+    modalidade: 'Crédito (9x)',
     taxa: 'Neon',
     desconto: 20.1797,
     receba_total: 1000,
@@ -94,7 +94,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '10x',
+    modalidade: 'Crédito (10x)',
     taxa: 'Neon',
     desconto: 20.1797,
     receba_total: 1000,
@@ -102,7 +102,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '11x',
+    modalidade: 'Crédito (11x)',
     taxa: 'Neon',
     desconto: 20.1797,
     receba_total: 1000,
@@ -110,7 +110,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     cliente_paga_mes: 1000,
   },
   {
-    modalidade: '12x',
+    modalidade: 'Crédito (12x)',
     taxa: 'Neon',
     desconto: 20.1797,
     receba_total: 1000,
