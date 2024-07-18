@@ -49,4 +49,4 @@ export class MainComponent implements OnInit {
       this.buttonClass = '';
     }, 1250);
   }
-}
+ }
