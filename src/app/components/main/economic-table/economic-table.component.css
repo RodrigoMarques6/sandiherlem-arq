@@ -1,39 +1,40 @@
 .div-table {
-    max-width: 80%;
-    margin: auto;
-    margin-top: 2%;
-    background: linear-gradient(rgb(61, 0, 61), #022f44);
-    border: 2px solid #8fb9aa;
-    margin-bottom: 2%;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 2%;
+  background: linear-gradient(rgb(61, 0, 61), #022f44);
+  border: 2px solid #8fb9aa;
+  margin-bottom: 2%;
 }
 
 .mat-elevation-z8 {
-    /* background-color: rgb(61, 0, 61); */
-    background-color: transparent;
-    margin: auto;
+  /* background-color: rgb(61, 0, 61); */
+  background-color: transparent;
+  margin: auto;
 }
 
 .div-alert {
-    border: 2px solid #8fb9aa;
-    text-align: center;
-    margin: auto;
-    max-width: 80%;
-    margin-top: 2%;
-    font-weight: bold;
+  border: 2px solid #8fb9aa;
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
+  margin-top: 2%;
+  font-weight: bold;
 }
 
-th, td {
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: 5%;
-    color: #8fb9aa;
+th,
+td {
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 5%;
+  color: #8fb9aa;
 }
 
 p {
-    color: #8fb9aa;
+  color: #8fb9aa;
 }
 
 .mat-mdc-row:hover .mat-mdc-cell {
-    color: bisque;
-    font-weight: bold;
-  }
+  color: bisque;
+  font-weight: bold;
+}
