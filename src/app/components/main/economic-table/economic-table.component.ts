@@ -140,12 +140,21 @@ export class EconomicTableComponent implements OnInit {
   descriptionTable: string = `Valores válidos para um projeto de R$ `;
   valueInput1!: number;
 
+  constructor(private router: Router, private sharedData: SharedService) {}
+
   ngOnInit(): void {
     this.valueInput1 = this.sharedData.getNumber();
-    console.log(this.valueInput1 * (5/100))
+    const calculatedDiscount = this.valueInput1 * (5 / 100);
+    this.updateDiscounts(calculatedDiscount);
   }
 
-  constructor(private router: Router, private sharedData: SharedService) {}
+  updateDiscounts(discount: number): void {
+    this.dataSource = this.dataSource.map(item => ({
+      ...item,
+      desconto: discount,
+    }));
+  }
+
   goToStart() {
     this.router.navigate(['/inicio']);
   }
