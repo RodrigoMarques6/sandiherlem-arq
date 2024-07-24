@@ -112,7 +112,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (12x)',
     taxa: 'Neon',
-    desconto: 20.1797,
+    desconto: 32289,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -142,6 +142,7 @@ export class EconomicTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.valueInput1 = this.sharedData.getNumber();
+    console.log(this.valueInput1 * (5/100))
   }
 
   constructor(private router: Router, private sharedData: SharedService) {}
