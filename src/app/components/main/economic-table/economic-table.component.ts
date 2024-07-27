@@ -16,7 +16,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Débito',
     taxa: '1,9%',
-    desconto: 1.0079,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -24,7 +24,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (1x)',
     taxa: '4%',
-    desconto: 4.0026,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -32,7 +32,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (2x)',
     taxa: '5%',
-    desconto: 6.941,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -40,7 +40,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (3x)',
     taxa: '5%',
-    desconto: 9.0122,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -48,7 +48,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (4x)',
     taxa: '5%',
-    desconto: 10.811,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -56,7 +56,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (5x)',
     taxa: '5%',
-    desconto: 12.0107,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -64,7 +64,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (6x)',
     taxa: '5%',
-    desconto: 14.0067,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -72,7 +72,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (7x)',
     taxa: '5%',
-    desconto: 15.9994,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -80,7 +80,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (8x)',
     taxa: '5%',
-    desconto: 18.9984,
+    desconto: 0,
     receba_total: 1200,
     receba_mes: 1300,
     cliente_paga_mes: 1400,
@@ -88,7 +88,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (9x)',
     taxa: '5%',
-    desconto: 20.1797,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -96,7 +96,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (10x)',
     taxa: '5%',
-    desconto: 20.1797,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -104,7 +104,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (11x)',
     taxa: '5%',
-    desconto: 20.1797,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -112,7 +112,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Crédito (12x)',
     taxa: '5%',
-    desconto: 32289,
+    desconto: 0,
     receba_total: 1000,
     receba_mes: 1000,
     cliente_paga_mes: 1000,
@@ -144,15 +144,18 @@ export class EconomicTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.valueInput1 = this.sharedData.getNumber();
-    const calculatedDiscount = this.valueInput1 * (5 / 100);
-    this.updateDiscounts(calculatedDiscount);
+    this.updateDiscounts();
   }
 
-  updateDiscounts(discount: number): void {
-    this.dataSource = this.dataSource.map(item => ({
-      ...item,
-      desconto: discount,
-    }));
+  updateDiscounts(): void {
+    this.dataSource = this.dataSource.map(item => {
+      const taxaPercent = parseFloat(item.taxa.replace('%', '').replace(',', '.'));
+      const discount = this.valueInput1 * (taxaPercent / 100);
+      return {
+        ...item,
+        desconto: discount,
+      };
+    });
   }
 
   goToStart() {
