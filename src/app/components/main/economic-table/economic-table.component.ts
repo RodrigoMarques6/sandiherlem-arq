@@ -15,7 +15,7 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     modalidade: 'Débito',
-    taxa: '5%',
+    taxa: '1,9%',
     desconto: 1.0079,
     receba_total: 1000,
     receba_mes: 1000,
@@ -23,7 +23,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: 'Crédito (1x)',
-    taxa: '5%',
+    taxa: '4%',
     desconto: 4.0026,
     receba_total: 1000,
     receba_mes: 1000,
@@ -87,7 +87,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: 'Crédito (9x)',
-    taxa: 'Neon',
+    taxa: '5%',
     desconto: 20.1797,
     receba_total: 1000,
     receba_mes: 1000,
@@ -95,7 +95,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: 'Crédito (10x)',
-    taxa: 'Neon',
+    taxa: '5%',
     desconto: 20.1797,
     receba_total: 1000,
     receba_mes: 1000,
@@ -103,7 +103,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: 'Crédito (11x)',
-    taxa: 'Neon',
+    taxa: '5%',
     desconto: 20.1797,
     receba_total: 1000,
     receba_mes: 1000,
@@ -111,7 +111,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     modalidade: 'Crédito (12x)',
-    taxa: 'Neon',
+    taxa: '5%',
     desconto: 32289,
     receba_total: 1000,
     receba_mes: 1000,
