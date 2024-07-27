@@ -150,10 +150,10 @@ export class EconomicTableComponent implements OnInit {
   updateDiscounts(): void {
     this.dataSource = this.dataSource.map(item => {
       const taxaPercent = parseFloat(item.taxa.replace('%', '').replace(',', '.'));
-      const discount = this.valueInput1 * (taxaPercent / 100);
+      const discount = (this.valueInput1 * (taxaPercent / 100)).toFixed(2);
       return {
         ...item,
-        desconto: discount,
+        desconto: parseFloat(discount),
       };
     });
   }
