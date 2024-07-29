@@ -160,6 +160,12 @@ export class EconomicTableComponent implements OnInit {
     });
   }
 
+  updateReceiveTotal() {}
+
+  updateReceiveMonth() {}
+
+  updateCustomerPaysMonth() {}
+
   goToStart() {
     this.router.navigate(['/inicio']);
   }
