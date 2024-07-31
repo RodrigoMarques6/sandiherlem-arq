@@ -162,7 +162,6 @@ export class EconomicTableComponent implements OnInit {
   }
 
   updateReceiveTotal(): void {
-    // função em teste, não commitada
     this.dataSource = this.dataSource.map((item) => {
       const receiveTotal = parseFloat(item.receba_total.toString());
       const total = (this.valueInput1 - item.desconto).toFixed(2);
