@@ -18,7 +18,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '1,9%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -26,7 +26,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '4%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -34,7 +34,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -42,7 +42,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -50,7 +50,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -58,7 +58,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -66,7 +66,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -74,7 +74,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -90,7 +90,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -98,7 +98,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -106,7 +106,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
   {
@@ -114,7 +114,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1000,
+    receba_mes: 0,
     cliente_paga_mes: 1000,
   },
 ];
@@ -146,6 +146,7 @@ export class EconomicTableComponent implements OnInit {
     this.valueInput1 = this.sharedData.getNumber();
     this.updateDiscounts();
     this.updateReceiveTotal();
+    this.updateReceiveMonth();
   }
 
   updateDiscounts(): void {
@@ -172,7 +173,17 @@ export class EconomicTableComponent implements OnInit {
     });
   }
 
-  updateReceiveMonth() {}
+  updateReceiveMonth() {
+    // Função precisa ser ajustada. No momento, está calculando idêntico ao ReceiveTotal(). 
+    this.dataSource = this.dataSource.map((item) => {
+      const receiveMonth = parseFloat(item.receba_mes.toString());
+      const totalMonth = (this.valueInput1 - item.desconto).toFixed(2);
+      return {
+        ...item,
+        receba_mes: parseFloat(totalMonth),
+      };
+    });
+  }
 
   updateCustomerPaysMonth() {}
 
