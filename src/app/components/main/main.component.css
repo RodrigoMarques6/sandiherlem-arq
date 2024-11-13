@@ -14,9 +14,6 @@ button:hover {
 
 /* button */
 
-* {
-  font-family: "Roboto", sans-serif;
-}
 .container {
   position: absolute;
   top: 50%;
