@@ -177,7 +177,7 @@ export class EconomicTableComponent implements OnInit {
   updateReceiveMonth(): void {
     this.dataSource = this.dataSource.map((item) => {
       let totalMonth;
-  
+
       switch (item.modalidade) {
         case 'Débito':
         case 'Crédito (1x)':
@@ -220,19 +220,18 @@ export class EconomicTableComponent implements OnInit {
           totalMonth = 0;
           break;
       }
-  
+
       return {
         ...item,
         receba_mes: parseFloat(totalMonth.toFixed(2)),
       };
     });
   }
-  
 
   updateCustomerPaysMonth(): void {
     this.dataSource = this.dataSource.map((item) => {
       let totalMonth;
-  
+
       switch (item.modalidade) {
         case 'Débito':
         case 'Crédito (1x)':
@@ -275,14 +274,13 @@ export class EconomicTableComponent implements OnInit {
           totalMonth = 0;
           break;
       }
-  
+
       return {
         ...item,
         cliente_paga_mes: parseFloat(totalMonth.toFixed(2)),
       };
     });
   }
-  
 
   goToStart() {
     this.router.navigate(['/inicio']);
