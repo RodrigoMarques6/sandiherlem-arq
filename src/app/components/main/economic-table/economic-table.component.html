@@ -16,23 +16,23 @@
 
       <ng-container matColumnDef="desconto">
         <th mat-header-cell *matHeaderCellDef>Desconto</th>
-        <td mat-cell *matCellDef="let element">{{ element.desconto }}</td>
+        <td mat-cell *matCellDef="let element">R$ {{ element.desconto }}</td>
       </ng-container>
 
       <ng-container matColumnDef="receba_total">
         <th mat-header-cell *matHeaderCellDef>Receba no total</th>
-        <td mat-cell *matCellDef="let element">{{ element.receba_total }}</td>
+        <td mat-cell *matCellDef="let element">R$ {{ element.receba_total }}</td>
       </ng-container>
 
       <ng-container matColumnDef="receba_mes">
         <th mat-header-cell *matHeaderCellDef>Receba por mês</th>
-        <td mat-cell *matCellDef="let element">{{ element.receba_mes }}</td>
+        <td mat-cell *matCellDef="let element">R$ {{ element.receba_mes }}</td>
       </ng-container>
 
       <ng-container matColumnDef="cliente_paga_mes">
         <th mat-header-cell *matHeaderCellDef>Cliente paga por mês</th>
         <td mat-cell *matCellDef="let element">
-          {{ element.cliente_paga_mes }}
+          R$ {{ element.cliente_paga_mes }}
         </td>
       </ng-container>
 

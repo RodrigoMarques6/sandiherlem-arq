@@ -19,7 +19,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (1x)',
@@ -27,7 +27,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (2x)',
@@ -35,7 +35,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (3x)',
@@ -43,7 +43,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (4x)',
@@ -51,7 +51,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (5x)',
@@ -59,7 +59,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (6x)',
@@ -67,7 +67,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (7x)',
@@ -75,15 +75,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (8x)',
     taxa: '5%',
     desconto: 0,
     receba_total: 0,
-    receba_mes: 1300,
-    cliente_paga_mes: 1400,
+    receba_mes: 0,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (9x)',
@@ -91,7 +91,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (10x)',
@@ -99,7 +99,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (11x)',
@@ -107,7 +107,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
   {
     modalidade: 'Crédito (12x)',
@@ -115,7 +115,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     desconto: 0,
     receba_total: 0,
     receba_mes: 0,
-    cliente_paga_mes: 1000,
+    cliente_paga_mes: 0,
   },
 ];
 
@@ -147,6 +147,7 @@ export class EconomicTableComponent implements OnInit {
     this.updateDiscounts();
     this.updateReceiveTotal();
     this.updateReceiveMonth();
+    this.updateCustomerPaysMonth();
   }
 
   updateDiscounts(): void {
@@ -173,19 +174,115 @@ export class EconomicTableComponent implements OnInit {
     });
   }
 
-  updateReceiveMonth() {
-    // Função precisa ser ajustada. No momento, está calculando idêntico ao ReceiveTotal(). 
+  updateReceiveMonth(): void {
     this.dataSource = this.dataSource.map((item) => {
-      const receiveMonth = parseFloat(item.receba_mes.toString());
-      const totalMonth = (this.valueInput1 - item.desconto).toFixed(2);
+      let totalMonth;
+  
+      switch (item.modalidade) {
+        case 'Débito':
+        case 'Crédito (1x)':
+          totalMonth = item.receba_total;
+          break;
+        case 'Crédito (2x)':
+          totalMonth = item.receba_total / 2;
+          break;
+        case 'Crédito (3x)':
+          totalMonth = item.receba_total / 3;
+          break;
+        case 'Crédito (4x)':
+          totalMonth = item.receba_total / 4;
+          break;
+        case 'Crédito (5x)':
+          totalMonth = item.receba_total / 5;
+          break;
+        case 'Crédito (6x)':
+          totalMonth = item.receba_total / 6;
+          break;
+        case 'Crédito (7x)':
+          totalMonth = item.receba_total / 7;
+          break;
+        case 'Crédito (8x)':
+          totalMonth = item.receba_total / 8;
+          break;
+        case 'Crédito (9x)':
+          totalMonth = item.receba_total / 9;
+          break;
+        case 'Crédito (10x)':
+          totalMonth = item.receba_total / 10;
+          break;
+        case 'Crédito (11x)':
+          totalMonth = item.receba_total / 11;
+          break;
+        case 'Crédito (12x)':
+          totalMonth = item.receba_total / 12;
+          break;
+        default:
+          totalMonth = 0;
+          break;
+      }
+  
       return {
         ...item,
-        receba_mes: parseFloat(totalMonth),
+        receba_mes: parseFloat(totalMonth.toFixed(2)),
       };
     });
   }
+  
 
-  updateCustomerPaysMonth() {}
+  updateCustomerPaysMonth(): void {
+    this.dataSource = this.dataSource.map((item) => {
+      let totalMonth;
+  
+      switch (item.modalidade) {
+        case 'Débito':
+        case 'Crédito (1x)':
+          totalMonth = this.valueInput1;
+          break;
+        case 'Crédito (2x)':
+          totalMonth = this.valueInput1 / 2;
+          break;
+        case 'Crédito (3x)':
+          totalMonth = this.valueInput1 / 3;
+          break;
+        case 'Crédito (4x)':
+          totalMonth = this.valueInput1 / 4;
+          break;
+        case 'Crédito (5x)':
+          totalMonth = this.valueInput1 / 5;
+          break;
+        case 'Crédito (6x)':
+          totalMonth = this.valueInput1 / 6;
+          break;
+        case 'Crédito (7x)':
+          totalMonth = this.valueInput1 / 7;
+          break;
+        case 'Crédito (8x)':
+          totalMonth = this.valueInput1 / 8;
+          break;
+        case 'Crédito (9x)':
+          totalMonth = this.valueInput1 / 9;
+          break;
+        case 'Crédito (10x)':
+          totalMonth = this.valueInput1 / 10;
+          break;
+        case 'Crédito (11x)':
+          totalMonth = this.valueInput1 / 11;
+          break;
+        case 'Crédito (12x)':
+          totalMonth = this.valueInput1 / 12;
+          break;
+        default:
+          totalMonth = 0;
+          break;
+      }
+  
+      return {
+        ...item,
+        cliente_paga_mes: parseFloat(totalMonth.toFixed(2)),
+      };
+    });
+  }
+  
 
   goToStart() {
     this.router.navigate(['/inicio']);
